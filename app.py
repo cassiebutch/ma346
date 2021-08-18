@@ -42,7 +42,7 @@ def get_key(val):
              return key
 
 # import minimum wage data from csv file
-minwagedf = pd.read_csv("ma346\Minimum_Wage_Data.csv", encoding='cp1252')
+minwagedf = pd.read_csv("Minimum_Wage_Data.csv", encoding='cp1252')
 
 # restrict minimum wage data so that the year is between 2005 and 2019
 # because the data in the suicide rate data frame only holds those years
@@ -52,7 +52,7 @@ minwagedf = minwagedf[(minwagedf['Year'] >= 2005) & (minwagedf['Year'] <= 2019)]
 minwagedf = minwagedf.drop('Footnote', axis= 1)
 
 # import suicide rate data from csv
-sratedf = pd.read_csv("ma346\csv.csv")
+sratedf = pd.read_csv("csv.csv")
 
 # drop column that holds unnecessary data
 sratedf = sratedf.drop('URL',axis=1)
